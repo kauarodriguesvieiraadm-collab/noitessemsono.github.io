@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cartas para você</title>
+    <meta
+      name="description"
+      content="Uma sequência de cartas guardadas com carinho."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="experience">
+      <section class="timeline-view" aria-labelledby="pageTitle">
+        <div class="intro">
+          <p class="kicker">PARA MAELIS.</p>
+          <h1 id="pageTitle">Algumas palavras nunca caberiam em uma conversa comum</h1>
+          <p>
+            Então elas ficaram guardadas aqui.
+          </p>
+        </div>
+
+        <nav class="timeline" aria-label="Lista de cartas">
+          <button class="letter-link is-active" type="button" data-letter="0">
+            <span class="number">1</span>
+            <span class="paper">Sobre você</span>
+          </button>
+          <button class="letter-link" type="button" data-letter="1">
+            <span class="number">2</span>
+            <span class="paper">Aquela pergunta</span>
+          </button>
+          <button class="letter-link" type="button" data-letter="2">
+            <span class="number">3</span>
+            <span class="paper">Você pode errar</span>
+          </button>
+          <button class="letter-link" type="button" data-letter="3">
+            <span class="number">4</span>
+            <span class="paper">Eu vou continuar aqui</span>
+          </button>
+          <button class="letter-link" type="button" data-letter="4">
+            <span class="number">5</span>
+            <span class="paper">Aquele dia</span>
+          </button>
+        </nav>
+
+        <footer class="status">
+          <span id="counter">1 / 5</span>
+          <div class="status__actions">
+            <button id="rainToggle" type="button" aria-pressed="false">Chuva baixa</button>
+            <button id="openLetter" type="button">Abrir carta</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <section class="reader" id="reader" aria-hidden="true">
+      <div class="reader__overlay" data-close></div>
+      <article class="letter" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <button class="close" type="button" data-close aria-label="Fechar carta">×</button>
+        <p class="letter__count" id="letterCount">Carta 1 de 5</p>
+        <h2 id="letterTitle">Sobre você</h2>
+        <div class="letter__body" id="letterBody"></div>
+        <div class="letter__actions">
+          <button id="prevLetter" type="button">Anterior</button>
+          <button id="nextLetter" type="button">Próxima</button>
+        </div>
+      </article>
+    </section>
+
+    <audio id="rainAudio" src="assets/rain-soft.wav" loop preload="auto"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
